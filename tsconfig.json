@@ -11,8 +11,6 @@
 		"sourceMap": true,
 		"removeComments": false,
 		"experimentalDecorators": true,
-		"typeRoots": [],
-		"types": ["node"],
 		"outDir": "bin",
 		"plugins": [
 			{
@@ -21,6 +19,7 @@
 		]
 	},
 	"exclude": [
+		"**/*.spec.ts",
 		"node_modules",
 		"bower_components",
 		"jspm_packages",

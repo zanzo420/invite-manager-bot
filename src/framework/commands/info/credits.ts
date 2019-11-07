@@ -5,14 +5,14 @@ import { BotCommand, CommandGroup } from '../../../types';
 import { Command, Context } from '../Command';
 
 // Developers
-const developers: string[] = ['Andy', 'Valandur', 'santjum', 'legendarylol'];
+export const developers: string[] = ['Andy', 'Valandur', 'santjum', 'legendarylol'];
 
 // Staff
-const moderators: string[] = ['SemiMute', 'theGordHoard', 'Mennoplays'];
+export const moderators: string[] = ['SemiMute', 'theGordHoard', 'Mennoplays'];
 
-const staff: string[] = ['CelestialStriden', 'Lukas', 'Audio', 'ᴊᴀᴄᴋ❤ Crush', 'Lukas1703'];
+export const staff: string[] = ['CelestialStriden', 'Lukas', 'Audio', 'ᴊᴀᴄᴋ❤ Crush', 'Lukas1703'];
 
-const translators: string[] = [
+export const translators: string[] = [
 	'amiog',
 	'CyberDarkBR',
 	'qq1zz',

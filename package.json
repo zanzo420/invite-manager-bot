@@ -10,7 +10,8 @@
 		"lint": "tslint --project tsconfig.json --config tslint.json --format stylish",
 		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"test/**/*.js\"",
 		"nxv": "node ./scripts/npm-exact-versions.js",
-		"docs": "node scripts/generate-docs.js"
+		"docs": "node scripts/generate-docs.js",
+		"test": "jest"
 	},
 	"husky": {
 		"hooks": {
@@ -54,6 +55,7 @@
 		"@sentry/cli": "1.48.0",
 		"@types/amqplib": "0.5.13",
 		"@types/i18n": "0.8.6",
+		"@types/jest": "24.0.22",
 		"@types/mysql2": "github:types/mysql2",
 		"@types/node": "12.11.7",
 		"@types/xmldoc": "1.1.4",
@@ -62,8 +64,10 @@
 		"docsify-cli": "4.3.0",
 		"fs-extra": "8.1.0",
 		"husky": "3.0.9",
+		"jest": "24.9.0",
 		"prettier": "1.18.2",
 		"pretty-quick": "2.0.0",
+		"ts-jest": "24.1.0",
 		"tslint": "5.20.0",
 		"tslint-config-prettier": "1.18.0",
 		"typescript": "3.6.4",

@@ -1,16 +1,29 @@
 import { Message, MessageContent, MessageFile, Permission, TextChannel } from 'eris';
 
+import { IMClient } from './client';
+
 // Discord epoch (2015-01-01T00:00:00.000Z)
 const EPOCH = 1420070400000;
 
 export class FakeChannel extends TextChannel {
-	public listener: (data: any) => void;
+	public data: MessageContent[];
+	public client: IMClient;
 
-	public createMessage(content: MessageContent, file?: MessageFile): Promise<Message> {
-		if (this.listener) {
-			this.listener(content);
-		}
-		return new Promise(resolve => resolve());
+	public async createMessage(content: MessageContent, file?: MessageFile): Promise<Message> {
+		this.data.push(content);
+		console.log(content);
+		return new Message(
+			{
+				id: '__FAKE_ID__',
+				content,
+				channel_id: '__FAKE_CHANNEL__',
+				author: null,
+				embeds: [],
+				attachments: [],
+				mentions: []
+			},
+			this.client
+		);
 	}
 
 	public permissionsOf(memberID: string): Permission {
